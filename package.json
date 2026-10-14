@@ -1,0 +1,35 @@
+{
+  "name": "openfox-openrouter-quota",
+  "version": "1.0.0",
+  "description": "OpenRouter usage & quota provider for OpenFox (via openfox-quota): credits, per-key limits, budgets and free-model request caps from your OpenRouter API key.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "openfox": {
+    "apiVersion": 2,
+    "displayName": "OpenRouter Quota",
+    "description": "Report OpenRouter usage and quotas (credits, key limits, budgets, free-model caps) into the Usage & Quotas panel.",
+    "entry": "./dist/index.js",
+    "capabilities": [
+      "settings",
+      "tools"
+    ],
+    "timeoutMs": 20000
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  },
+  "license": "MIT"
+}
